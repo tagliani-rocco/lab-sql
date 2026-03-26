@@ -24,6 +24,8 @@ select s.cod_seriale, d.nome from 4CTL_prodotti s, 4CTL_modelli_prodotto d where
 --12
 select o.id_ordine, c.cognome, m.nome, p.cod_seriale from 4CTL_ordini o, 4CTL_clienti c, 4CTL_modelli_prodotto m, 4CTL_prodotti p
 where o.id_cliente=c.id_cliente and m.id_modello=p.id_modello and d.id_ordine=o.id_ordine and d.id_prodotto=p.id_prodotto
+--13
+select g.stato_garanzia, p.cod_seriale from 4CTL_garanzie g, 4CTL_prodotti p where g.id_prodotto=p.id_prodotto
 --14
 select count(p.disponibilita), m.categoria from 4CTL_prodotti p, 4CTL_modelli_prodotto m where p.disponibilita='S' and m.categoria<>m.categoria+1
 
