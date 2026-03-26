@@ -1,0 +1,23 @@
+
+select * from 4CTL_prodotti
+
+select nome, prezzo_listino from 4CTL_modelli_prodotto
+
+select * from 4CTL_modelli_prodotto where prezzo_listino<600
+
+select * from 4CTL_modelli_prodotto where nome like '%Samsung%'
+
+select * from 4CTL_clienti where nome like '%a%'
+
+select * from 4CTL_dettagli_ordine ORDER BY prezzo_vendita_effettivo DESC
+
+select DISTINCT categoria from 4CTL_modelli_prodotto
+
+select * from 4CTL_ordini ORDER BY `4CTL_ordini`.`data_ordine` ASC LIMIT 10
+
+select * from 4CTL_clienti ORDER BY cognome
+select * from 4CTL_clienti ORDER BY nome
+
+select * from 4CTL_ordini where data_ordine like '%-06-%'
+
+select s.cod_seriale, d.nome from 4CTL_prodotti s, 4CTL_modelli_prodotto d where s.id_modello=d.id_modello
