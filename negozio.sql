@@ -29,3 +29,5 @@ select g.stato_garanzia, p.cod_seriale from 4CTL_garanzie g, 4CTL_prodotti p whe
 --14
 select count(p.disponibilita), m.categoria from 4CTL_prodotti p, 4CTL_modelli_prodotto m where p.disponibilita='S' and m.categoria<>m.categoria+1
 
+SELECT categoria, COUNT(id_modello) as nc FROM `4CTL_modelli_prodotto`
+group by categoria
